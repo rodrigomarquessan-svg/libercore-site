@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const socios = [
+  {
+    nome: "Ana Leite",
+    cargo: "Sócia Fundadora",
+    bio: "Contadora com mais de 27 anos de experiência, especialista em Departamento Pessoal, societário e fiscal, atuando com empresas de diversos setores e regimes tributários.",
+    foto: "/images/ana.jpg",
+    email: "ana@contalibercore.com",
+    tel: "(11) 99685-4335",
+  },
+  {
+    nome: "Fernando Almeida",
+    cargo: "Sócio Fundador",
+    bio: "Contador com mais de 15 anos de experiência nas áreas contábil e fiscal, especialista em regularização de empresas e obrigações acessórias para diferentes regimes tributários.",
+    foto: "/images/fernando.jpg",
+    email: "fernando@contalibercore.com",
+    tel: "(11) 95410-8086",
+  },
+  {
+    nome: "Rodrigo Marques",
+    cargo: "Sócio Fundador",
+    bio: "Profissional com 15 anos de experiência em consultoria, perícia e auditoria. Reconhecido pela expertise em imposto de renda de brasileiros com investimentos no exterior e empresas offshore.",
+    foto: "/images/rodrigo-crop.jpg",
+    email: "rodrigo@contalibercore.com",
+    tel: "(11) 96915-6746",
+  },
+];
+---
+
+<Layout title="Sobre — LiberCore Contabilidade">
+  <section class="bg-ink text-cream py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-6 lg:px-10">
+      <span class="eyebrow">Sobre a LiberCore</span>
+      <h1 class="mt-8 text-5xl md:text-6xl lg:text-7xl font-display max-w-3xl leading-[1.05]">
+        Contabilidade que <em class="italic text-gold">liberta</em>.
+      </h1>
+      <p class="mt-8 max-w-2xl text-lg md:text-xl text-cream/70 leading-relaxed">
+        Nosso nome traduz nossa missão: oferecer liberdade para que você foque no core do seu negócio, enquanto cuidamos de toda a gestão contábil e fiscal.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-24 lg:py-32 max-w-5xl mx-auto px-6 lg:px-10">
+    <div class="prose-lg space-y-8 text-lg text-ink/80 leading-relaxed">
+      <p>
+        Na LiberCore Contabilidade, atendemos clientes de alta renda e investidores com ativos no Brasil e no exterior. Acreditamos que a contabilidade deve ir muito além do cumprimento de obrigações.
+      </p>
+      <p>
+        Atuamos como <strong class="text-ink">parceiro estratégico</strong>, centralizando serviços nacionais e internacionais em um só lugar e interagindo diretamente com advogados, agentes fiduciários, bancos e outros profissionais essenciais ao patrimônio do cliente.
+      </p>
+      <p>
+        Nosso objetivo é simplificar processos, eliminar barreiras e apoiar decisões estratégicas para o crescimento sustentável do seu negócio e dos seus investimentos pessoais.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-24 lg:py-32 bg-cream-soft/40">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto mb-20">
+        <span class="eyebrow">Sócios fundadores</span>
+        <h2 class="mt-6 text-4xl md:text-5xl font-display">
+          Conheça quem está <em class="italic text-navy">por trás</em>.
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10 lg:gap-8">
+        {socios.map(socio => (
+          <article>
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-cream-soft mb-6">
+              <img src={socio.foto} alt={socio.nome} class="w-full h-full object-cover object-top" loading="lazy" />
+            </div>
+            <h3 class="text-2xl font-display">{socio.nome}</h3>
+            <p class="mt-1 text-sm uppercase tracking-wider text-gold">{socio.cargo}</p>
+            <p class="mt-4 text-sm text-ink/70 leading-relaxed">{socio.bio}</p>
+            <div class="mt-4 space-y-1 text-sm">
+              <a href={`mailto:${socio.email}`} class="block text-navy hover:text-gold transition-colors">{socio.email}</a>
+              <p class="text-ink/60">{socio.tel}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

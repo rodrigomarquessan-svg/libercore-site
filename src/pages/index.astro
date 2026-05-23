@@ -1,0 +1,231 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import { servicos } from "../data/servicos";
+
+const socios = [
+  {
+    nome: "Ana Leite",
+    cargo: "Sócia Fundadora",
+    bio: "27 anos de experiência em Departamento Pessoal, societário e fiscal, atuando com empresas de diversos setores e regimes tributários.",
+    foto: "/images/ana.jpg",
+    email: "ana@contalibercore.com",
+    tel: "(11) 99685-4335",
+  },
+  {
+    nome: "Fernando Almeida",
+    cargo: "Sócio Fundador",
+    bio: "15 anos de experiência nas áreas contábil e fiscal, especialista em regularização de empresas e obrigações acessórias para diferentes regimes tributários.",
+    foto: "/images/fernando.jpg",
+    email: "fernando@contalibercore.com",
+    tel: "(11) 95410-8086",
+  },
+  {
+    nome: "Rodrigo Marques",
+    cargo: "Sócio Fundador",
+    bio: "15 anos de experiência em consultoria, perícia e auditoria. Reconhecido pela expertise em imposto de renda de brasileiros com investimentos no exterior e empresas offshore.",
+    foto: "/images/rodrigo-crop.jpg",
+    email: "rodrigo@contalibercore.com",
+    tel: "(11) 96915-6746",
+  },
+];
+---
+
+<Layout>
+  <!-- Hero -->
+  <section class="relative bg-ink text-cream overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-navy rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gold/30 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-32 lg:pt-32 lg:pb-40">
+      <div class="max-w-4xl">
+        <span class="eyebrow fade-up">Solução contábil completa · Brasil & Exterior</span>
+
+        <h1 class="mt-8 text-5xl md:text-6xl lg:text-7xl font-display font-medium leading-[1.05] fade-up fade-up-delay-1">
+          Liberdade para focar no <em class="italic text-gold">core</em> do seu negócio e da sua vida.
+        </h1>
+
+        <p class="mt-8 max-w-2xl text-lg md:text-xl text-cream/70 leading-relaxed fade-up fade-up-delay-2">
+          Atendemos pessoas físicas, empresas operacionais, holdings e investidores — no Brasil e no exterior. Reunimos contabilidade, fiscal, departamento pessoal e gestão patrimonial em um só lugar, para que você dedique sua energia ao que importa.
+        </p>
+
+        <div class="mt-12 flex flex-col sm:flex-row gap-4 fade-up fade-up-delay-3">
+          <a href="/contato" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium text-ink bg-gold hover:bg-gold-soft transition-colors rounded-full">
+            Conversar com um sócio
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/servicos" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium text-cream border border-cream/20 hover:border-cream/50 transition-colors rounded-full">
+            Ver serviços
+          </a>
+        </div>
+
+        <!-- Áreas de atuação strip -->
+        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-10 fade-up fade-up-delay-4">
+          <div>
+            <div class="text-2xl md:text-3xl font-display text-gold leading-tight">Brasil &<br/>Exterior</div>
+            <div class="mt-3 text-xs uppercase tracking-wider text-cream/50">apoio contábil e fiscal</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-3xl font-display text-gold leading-tight">IRPF &<br/>DCBE</div>
+            <div class="mt-3 text-xs uppercase tracking-wider text-cream/50">pessoa física e exterior</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-3xl font-display text-gold leading-tight">Rotina<br/>completa</div>
+            <div class="mt-3 text-xs uppercase tracking-wider text-cream/50">contábil · fiscal · folha</div>
+          </div>
+          <div>
+            <div class="text-2xl md:text-3xl font-display text-gold leading-tight">Padrões<br/>contábeis</div>
+            <div class="mt-3 text-xs uppercase tracking-wider text-cream/50">BR GAAP · IFRS · US GAAP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Para quem é -->
+  <section class="py-24 lg:py-32 max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mb-16">
+      <span class="eyebrow">Para quem é</span>
+      <h2 class="mt-6 text-4xl md:text-5xl font-display">
+        Uma estrutura, <em class="italic text-navy">três frentes</em> de atendimento.
+      </h2>
+      <p class="mt-6 text-lg text-ink/70 leading-relaxed">
+        Cobrimos toda a cadeia contábil e fiscal — do dia a dia da empresa operacional ao IRPF do sócio, passando pela holding da família.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-8 lg:p-10 bg-cream-soft rounded-2xl">
+        <div class="font-display text-5xl text-gold/80 leading-none">01</div>
+        <h3 class="mt-6 text-2xl font-display">Pessoa Física</h3>
+        <p class="mt-4 text-sm text-ink/75 leading-relaxed">
+          IRPF (declaração anual, ganho de capital, carnê-leão, declaração de saída, doações para ITCMD e demais obrigações) e DCBE. Atendimento técnico para quem tem ativos complexos, herança, investimentos no exterior, offshore, patrimônio relevante e estruturas societárias diversas.
+        </p>
+      </div>
+      <div class="p-8 lg:p-10 bg-cream-soft rounded-2xl">
+        <div class="font-display text-5xl text-gold/80 leading-none">02</div>
+        <h3 class="mt-6 text-2xl font-display">Empresas</h3>
+        <p class="mt-4 text-sm text-ink/75 leading-relaxed">
+          Contabilidade, fiscal e departamento pessoal completos. Serviços paralegais com representação em órgãos públicos e leque completo de soluções empresariais e jurídicas — com atuação direta da LiberCore e conexão com parceiros confiáveis para o que sai do nosso escopo.
+        </p>
+      </div>
+      <div class="p-8 lg:p-10 bg-cream-soft rounded-2xl">
+        <div class="font-display text-5xl text-gold/80 leading-none">03</div>
+        <h3 class="mt-6 text-2xl font-display">Patrimônio & Família</h3>
+        <p class="mt-4 text-sm text-ink/75 leading-relaxed">
+          Holdings patrimoniais, offshore (BR GAAP, IFRS e US GAAP), organização do patrimônio entre PF e PJ, planejamento sucessório. Visão integrada da empresa operacional, da estrutura patrimonial e das obrigações fiscais pessoais do cliente.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferencial -->
+  <section class="py-24 lg:py-32 bg-ink text-cream">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-20">
+        <div class="lg:col-span-5">
+          <span class="eyebrow">Nosso diferencial</span>
+          <h2 class="mt-6 text-4xl md:text-5xl font-display">
+            Um único parceiro<br/>
+            para <em class="italic text-gold">toda a estrutura</em>.
+          </h2>
+        </div>
+        <div class="lg:col-span-7 space-y-6 text-lg text-cream/75 leading-relaxed">
+          <p>
+            Diferente de escritórios que atendem só pessoa física, só empresas ou só investimentos no exterior, a LiberCore reúne todas as competências sob o mesmo teto.
+          </p>
+          <p>
+            Sua empresa operacional, sua holding patrimonial, seu IRPF, sua DCBE, seu offshore — <strong class="text-cream">tudo integrado, sem retrabalho, com visão de conjunto</strong>.
+          </p>
+          <p>
+            Atuamos como parceiro estratégico, interagindo diretamente com advogados, agentes fiduciários, bancos e outros profissionais essenciais. O que une o atendimento é o cuidado técnico e a postura de parceiro de longo prazo — do empresário com a primeira holding ao investidor com estruturas internacionais complexas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="py-24 lg:py-32 bg-cream-soft/40">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+        <div>
+          <span class="eyebrow">O que fazemos</span>
+          <h2 class="mt-6 text-4xl md:text-5xl font-display max-w-xl">
+            Serviços que dão <em class="italic text-gold">liberdade</em> ao seu tempo.
+          </h2>
+        </div>
+        <a href="/servicos" class="inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-gold transition-colors">
+          Ver todos os serviços
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {servicos.map((s, i) => (
+          <ServiceCard
+            title={s.titulo}
+            description={s.resumo}
+            href={`/servicos/${s.slug}`}
+            icon={s.icon}
+            index={i}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Sócios -->
+  <section class="py-24 lg:py-32 max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <span class="eyebrow">Sócios fundadores</span>
+      <h2 class="mt-6 text-4xl md:text-5xl font-display">
+        Mais de meio século <em class="italic text-navy">de experiência</em> combinada.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-10 lg:gap-8">
+      {socios.map(socio => (
+        <article class="group">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-cream-soft mb-6">
+            <img src={socio.foto} alt={socio.nome} class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+          </div>
+          <h3 class="text-2xl font-display">{socio.nome}</h3>
+          <p class="mt-1 text-sm uppercase tracking-wider text-gold">{socio.cargo}</p>
+          <p class="mt-4 text-sm text-ink/70 leading-relaxed">{socio.bio}</p>
+          <div class="mt-4 space-y-1 text-sm">
+            <a href={`mailto:${socio.email}`} class="block text-navy hover:text-gold transition-colors">{socio.email}</a>
+            <p class="text-ink/60">{socio.tel}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 lg:py-32 max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="bg-ink text-cream rounded-3xl px-8 py-16 lg:p-20 relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl"></div>
+      <div class="relative max-w-3xl">
+        <span class="eyebrow text-gold">Próximo passo</span>
+        <h2 class="mt-6 text-4xl md:text-5xl lg:text-6xl font-display">
+          Vamos conversar sobre <em class="italic text-gold">seu cenário</em>.
+        </h2>
+        <p class="mt-6 text-lg text-cream/70 max-w-xl">
+          Atendimento direto com um dos sócios. Sem intermediários, sem fórmulas prontas — entendemos seu contexto antes de propor solução.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="/contato" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium text-ink bg-gold hover:bg-gold-soft transition-colors rounded-full">
+            Agendar uma conversa
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="mailto:contato@contalibercore.com" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium text-cream border border-cream/20 hover:border-cream/50 transition-colors rounded-full">
+            contato@contalibercore.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

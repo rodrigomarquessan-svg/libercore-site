@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors - Opção B (premium boutique) */
+  --color-ink: #0A0E1A;          /* Carvão profundo - bg escuro */
+  --color-ink-soft: #1A1F2E;     /* Carvão soft */
+  --color-cream: #FAF7F2;        /* Marfim quente - bg claro */
+  --color-cream-soft: #F2EDE3;   /* Marfim mais escuro */
+  --color-navy: #1E3A5F;         /* Navy LiberCore */
+  --color-navy-deep: #102E51;    /* Navy profundo */
+  --color-gold: #C9A961;         /* Acento dourado premium */
+  --color-gold-soft: #D9BD7E;
+  --color-sky: #5BA3D0;          /* Azul claro do logo */
+
+  /* Typography */
+  --font-display: "Newsreader", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-cream);
+  font-feature-settings: "ss01", "cv11";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Subtle entrance animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.fade-up-delay-1 { animation-delay: 0.1s; }
+.fade-up-delay-2 { animation-delay: 0.2s; }
+.fade-up-delay-3 { animation-delay: 0.3s; }
+.fade-up-delay-4 { animation-delay: 0.4s; }
+
+/* Section underline accent */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: currentColor;
+}
