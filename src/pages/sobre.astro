@@ -67,7 +67,7 @@ const socios = [
 
       <div class="grid md:grid-cols-3 gap-10 lg:gap-8">
         {socios.map(socio => (
-          <article>
+          <article class="max-w-xs mx-auto md:max-w-none">
             <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-cream-soft mb-6">
               <img src={socio.foto} alt={socio.nome} class="w-full h-full object-cover object-top" loading="lazy" />
             </div>
