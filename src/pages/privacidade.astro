@@ -1,0 +1,116 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const secoes = [
+  {
+    titulo: "1. Quem é o controlador",
+    paragrafos: [
+      "Este site é mantido pela Libercore Assessoria Contábil Ltda. (“LiberCore”), CNPJ 01.463.228/0001-80, com sede na Rua Vilela, 976, Sala 1, Tatuapé, São Paulo/SP, CEP 03.314-000, responsável (controladora) pelas decisões sobre o tratamento dos dados pessoais coletados neste site.",
+    ],
+  },
+  {
+    titulo: "2. Encarregado pelo Tratamento de Dados (DPO)",
+    paragrafos: [
+      "Encarregado: Rodrigo Marques dos Santos. Substituta: Ana Rita Leite.",
+      "Canal para os titulares e para a ANPD: contato@contalibercore.com.",
+    ],
+  },
+  {
+    titulo: "3. Quais dados coletamos",
+    itens: [
+      "Dados que você informa no formulário de contato: nome completo, e-mail, telefone, assunto e o conteúdo da mensagem.",
+      "Dados técnicos mínimos de acesso (como endereço IP e registros de navegação), eventualmente coletados pelos provedores de hospedagem e de infraestrutura, para o funcionamento e a segurança do site.",
+    ],
+    paragrafos: [
+      "Este site não utiliza cookies de rastreamento, de publicidade ou de análise de audiência (ver item 8).",
+    ],
+  },
+  {
+    titulo: "4. Para que usamos",
+    itens: [
+      "Responder ao seu contato e atender à sua solicitação;",
+      "Adotar providências preliminares relacionadas a um eventual contrato de prestação de serviços, a seu pedido;",
+      "Comunicar informações pertinentes à sua solicitação.",
+    ],
+    paragrafos: [
+      "Não usamos os dados do formulário para finalidades incompatíveis com essas nem os comercializamos.",
+    ],
+  },
+  {
+    titulo: "5. Base legal",
+    paragrafos: [
+      "O tratamento dos dados do formulário fundamenta-se, conforme o caso, na execução de procedimentos preliminares a contrato a pedido do titular (art. 7º, V, da LGPD) e no legítimo interesse em responder e dar seguimento ao contato (art. 7º, IX). Quando a relação evolui para a prestação de serviços contábeis, o tratamento passa a se fundamentar na execução do contrato e no cumprimento de obrigações legais e regulatórias.",
+    ],
+  },
+  {
+    titulo: "6. Compartilhamento e operadores",
+    paragrafos: [
+      "Para viabilizar o site e o atendimento, os dados podem ser tratados por prestadores que atuam como operadores, sob instruções da LiberCore, entre eles o serviço de recebimento das mensagens do formulário (Formspree) e provedores de hospedagem e de infraestrutura. Também poderemos compartilhar dados quando exigido por lei ou por autoridade competente. Não há venda de dados pessoais.",
+    ],
+  },
+  {
+    titulo: "7. Transferência internacional",
+    paragrafos: [
+      "O serviço que recebe as mensagens do formulário (Formspree) está localizado no exterior, de modo que os dados enviados por esse canal podem ser transferidos e armazenados fora do Brasil. Nesses casos, a LiberCore verifica a existência de hipótese legal e de mecanismo válido de transferência previstos na LGPD e na regulamentação da ANPD, adotando as garantias aplicáveis de forma proporcional à operação.",
+    ],
+  },
+  {
+    titulo: "8. Cookies",
+    paragrafos: [
+      "Este site é estático e, nas páginas verificadas, não emprega cookies de rastreamento, de análise (analytics) ou de publicidade, nem carrega rastreadores de terceiros. Por isso não exibimos banner de consentimento de cookies. Caso isso mude, este Aviso será atualizado e, se aplicável, será disponibilizado mecanismo de escolha.",
+    ],
+  },
+  {
+    titulo: "9. Por quanto tempo guardamos",
+    paragrafos: [
+      "Mantemos os dados pelo tempo necessário ao atendimento da sua solicitação e, quando aplicável, pelos prazos exigidos pela legislação. Depois disso, os dados são eliminados ou anonimizados de forma segura, ressalvadas as hipóteses legais de guarda.",
+    ],
+  },
+  {
+    titulo: "10. Seus direitos",
+    paragrafos: [
+      "Nos termos do art. 18 da LGPD, você pode solicitar: confirmação da existência de tratamento; acesso; correção de dados incompletos, inexatos ou desatualizados; anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade; portabilidade; informação sobre compartilhamentos; e, quando o tratamento se basear em consentimento, a sua revogação. Para exercer esses direitos, use o canal do Encarregado (item 2).",
+    ],
+  },
+  {
+    titulo: "11. Atualizações",
+    paragrafos: [
+      "Este Aviso poderá ser atualizado. A data da última atualização consta no topo desta página.",
+    ],
+  },
+];
+---
+
+<Layout
+  title="Aviso de Privacidade — LiberCore Contabilidade"
+  description="Como a LiberCore trata os dados pessoais coletados neste site, seus direitos e o contato do Encarregado, conforme a LGPD."
+>
+  <section class="bg-ink text-cream py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-6 lg:px-10">
+      <span class="eyebrow">Privacidade</span>
+      <h1 class="mt-8 text-5xl md:text-6xl lg:text-7xl font-display max-w-3xl leading-[1.05]">
+        Aviso de <em class="italic text-gold">Privacidade</em>.
+      </h1>
+      <p class="mt-8 max-w-2xl text-lg md:text-xl text-cream/70 leading-relaxed">
+        Como tratamos os dados pessoais coletados neste site, com base na Lei nº 13.709/2018 (LGPD).
+      </p>
+      <p class="mt-6 text-sm text-cream/50">Última atualização: julho de 2026</p>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 max-w-3xl mx-auto px-6 lg:px-10">
+    <div class="space-y-10 text-ink/80 leading-relaxed">
+      {secoes.map(sec => (
+        <div>
+          <h2 class="text-2xl font-display text-ink">{sec.titulo}</h2>
+          {sec.itens && (
+            <ul class="mt-4 space-y-2 list-disc pl-5">
+              {sec.itens.map(item => <li>{item}</li>)}
+            </ul>
+          )}
+          {sec.paragrafos && sec.paragrafos.map(p => <p class="mt-4">{p}</p>)}
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>

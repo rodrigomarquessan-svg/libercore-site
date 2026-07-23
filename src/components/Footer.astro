@@ -25,6 +25,7 @@ const year = new Date().getFullYear();
           <li><a href="/servicos" class="hover:text-gold transition-colors">Serviços</a></li>
           <li><a href="/sobre" class="hover:text-gold transition-colors">Sobre</a></li>
           <li><a href="/contato" class="hover:text-gold transition-colors">Contato</a></li>
+          <li><a href="/privacidade" class="hover:text-gold transition-colors">Privacidade</a></li>
         </ul>
       </div>
 
@@ -46,9 +47,16 @@ const year = new Date().getFullYear();
       </div>
     </div>
 
-    <div class="mt-16 pt-8 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-4 text-xs text-cream/50">
-      <p>© {year} LiberCore Contabilidade. Todos os direitos reservados.</p>
-      <p>CRC ativo · Atendimento Brasil e Exterior</p>
+    <div class="mt-16 pt-8 border-t border-cream/10 space-y-4 text-xs text-cream/50">
+      <p class="leading-relaxed">
+        <a href="/privacidade" class="hover:text-gold transition-colors underline underline-offset-2">Aviso de Privacidade</a>
+        · Encarregado pelo Tratamento de Dados (LGPD): Rodrigo Marques dos Santos —
+        <a href="mailto:contato@contalibercore.com" class="hover:text-gold transition-colors">contato@contalibercore.com</a>
+      </p>
+      <div class="flex flex-col sm:flex-row justify-between gap-4">
+        <p>© {year} LiberCore Contabilidade. Todos os direitos reservados.</p>
+        <p>CRC ativo · Atendimento Brasil e Exterior</p>
+      </div>
     </div>
   </div>
 </footer>
