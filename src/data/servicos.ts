@@ -15,6 +15,7 @@ const ICONS = {
   shield: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z"/></svg>',
   users: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
   home: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>',
+  briefcase: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>',
 };
 
 export const servicos: Servico[] = [
@@ -62,7 +63,6 @@ export const servicos: Servico[] = [
       "Elaboração de Balanço Patrimonial, DRE, DFC e DMPL",
       "Conciliações bancárias e contábeis",
       "Lançamentos fiscais e ajustes",
-      "Constituição e manutenção de empresas",
       "Demonstrações para auditoria externa",
     ],
     paraQuem: "Atendemos de estruturas simples — micro e pequenas empresas em Simples Nacional ou Lucro Presumido — até operações mais complexas, com relatórios em padrão internacional e suporte a auditoria externa.",
@@ -114,6 +114,21 @@ export const servicos: Servico[] = [
       "Distribuição de lucros e gestão patrimonial",
     ],
     paraQuem: "Famílias com patrimônio relevante que buscam organização sucessória, proteção patrimonial e eficiência tributária.",
+  },
+  {
+    slug: "societario-legalizacao",
+    titulo: "Societário & Legalização",
+    resumo: "Abertura, alterações, encerramento, licenças e certificado digital.",
+    descricaoCurta: "Registro e manutenção da empresa na Junta Comercial, na Receita Federal, na prefeitura e nos demais órgãos, do contrato social ao encerramento, com acompanhamento de cada etapa.",
+    icon: ICONS.briefcase,
+    itens: [
+      "Abertura de empresas: limitada, unipessoal e sociedade anônima",
+      "Alterações contratuais e atos societários: entrada e saída de sócios, capital, endereço, objeto, transformação",
+      "Encerramento de empresas (baixa)",
+      "Inscrições, licenças e alvarás",
+      "Certificado digital e-CPF e e-CNPJ: emissão e renovação, com validação por videoconferência",
+    ],
+    paraQuem: "Empresas e sócios que precisam abrir, reorganizar ou encerrar uma empresa, e clientes que precisam emitir ou renovar o certificado digital.",
   },
 ];
 

@@ -26,6 +26,7 @@ import { servicos } from "../../data/servicos";
           href={`/servicos/${s.slug}`}
           icon={s.icon}
           index={i}
+          class={i === servicos.length - 1 && servicos.length % 3 === 1 ? "lg:col-start-2" : ""}
         />
       ))}
     </div>
