@@ -6,6 +6,14 @@ export interface Servico {
   icon: string;
   itens: string[];
   paraQuem: string;
+  destaque?: {
+    id: string;
+    titulo: string;
+    texto: string;
+    pontos: { titulo: string; texto: string }[];
+    cta: string;
+    href: string;
+  };
 }
 
 const ICONS = {
@@ -129,6 +137,18 @@ export const servicos: Servico[] = [
       "Certificado digital e-CPF e e-CNPJ: emissão e renovação, com validação por videoconferência",
     ],
     paraQuem: "Empresas e sócios que precisam abrir, reorganizar ou encerrar uma empresa, e clientes que precisam emitir ou renovar o certificado digital.",
+    destaque: {
+      id: "certificado-digital",
+      titulo: "Certificado digital",
+      texto: "Emitimos e renovamos o seu certificado digital, com o acompanhamento da nossa equipe do pedido à emissão.",
+      pontos: [
+        { titulo: "e-CPF e e-CNPJ", texto: "Certificado A1 para a pessoa física e para a empresa." },
+        { titulo: "Validação on-line", texto: "Por videoconferência, com horário agendado. Quando não for possível, indicamos um ponto de atendimento." },
+        { titulo: "Aviso antes de vencer", texto: "Para os clientes da LiberCore, acompanhamos a validade e cuidamos da renovação." },
+      ],
+      cta: "Solicitar certificado",
+      href: "/contato",
+    },
   },
 ];
 
